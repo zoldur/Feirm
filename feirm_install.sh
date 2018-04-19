@@ -25,10 +25,10 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  tar xvzf $COIN_ZIP
-  chmod +x $COIN_DAEMON $COIN_CLI
-  chown root: $COIN_DAEMON $COIN_CLI
-  cp $COIN_DAEMON $COIN_CLI $COIN_PATH
+  tar xvzf $COIN_ZIP >/dev/null 2>&1
+  chmod +x $COIN_DAEMON $COIN_CLI >/dev/null 2>&1
+  chown root: $COIN_DAEMON $COIN_CLI >/dev/null 2>&1
+  cp $COIN_DAEMON $COIN_CLI $COIN_PATH >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
@@ -189,6 +189,7 @@ fi
 }
 
 function prepare_system() {
+clear
 echo -e "Preparing the system to install ${GREEN}$COIN_NAME${NC} master node."
 apt-get update >/dev/null 2>&1
 DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
