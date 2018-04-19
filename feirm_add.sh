@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='feirm.conf'
-ORIGFOLDER='/root/.feirm.orig'
+ORIGFOLDER='/root/.feirmdefault'
 CONFIGFOLDER="/root/.feirm-$1"
 COIN_DAEMON='feirmd'
 COIN_CLI='feirm-cli'
