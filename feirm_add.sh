@@ -9,7 +9,7 @@ COIN_CLI='feirm-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_NAME="feirm-$1"
 
-NODEIP=$(curl -s4 icanhazip.com)
+NODEIP=$(curl -s4 api.ipify.org)
 
 
 RED='\033[0;31m'
@@ -138,7 +138,7 @@ function get_ip() {
   declare -a NODE_IPS
   for ips in $(netstat -i | awk '!/Kernel|Iface|lo/ {print $1," "}')
   do
-    NODE_IPS+=($(curl --interface $ips --connect-timeout 2 -s4 icanhazip.com))
+    NODE_IPS+=($(curl --interface $ips --connect-timeout 2 -s4 api.ipify.org))
   done
 
   if [ ${#NODE_IPS[@]} -gt 1 ]
