@@ -4,7 +4,7 @@ Shell script to install a [Feirm Masternode](https://feirm.com) on a Linux serve
 
 ## Installation
 ```
-wget -q https://raw.githubusercontent.com/zoldur/Feirm/master/feirm_install.sh
+wget -N https://raw.githubusercontent.com/zoldur/Feirm/master/feirm_install.sh
 bash feirm_install.sh
 ```
 ***
